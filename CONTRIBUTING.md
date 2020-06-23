@@ -1,8 +1,8 @@
 # Contributing.md
 
-## Branch rules
+## Contributing workflow with branching
 
-New featre = new branch. New bugfix = new branch. For every change or addition you want to make in this project, take the following steps:
+New feature = new branch. New bugfix = new branch. For every change or addition you want to make in this project, take the following steps:
 
 1. Checkout to `develop`
 1. Pull latest changes from origin:develop (recommended)
