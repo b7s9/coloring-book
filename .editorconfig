@@ -5,3 +5,7 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_trailing_newline = true
+max_line_length = 120
+
+[*.html]
+max_line_length = off
