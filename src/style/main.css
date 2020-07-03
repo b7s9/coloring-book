@@ -1,0 +1,45 @@
+/* ----------------------------------------------------- */
+/* RESET */
+/* ----------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------------------------------- */
+/* UTITLITIES */
+/* ----------------------------------------------------- */
+
+.border {
+    border: solid #ccc 1px;
+}
+
+.component {
+    border: solid #ccc 1px;
+}
+
+section {
+    border: solid #ccc 1px;
+}
+
+/* ----------------------------------------------------- */
+/* RULES */
+/* ----------------------------------------------------- */
+
+nav {
+    padding: 0 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 1rem;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 52rem;
+}
