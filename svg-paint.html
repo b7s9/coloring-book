@@ -1,7 +1,8 @@
 <html>
 <body>
 
-<input type="text" id="hexpicker" value="FFFF00">
+<label>Ensure there is a "#" preceding any hex codes you use here.</label>
+<input type="text" id="hexpicker" value="#FFFF00">
 <br>
 
 <script defer>
@@ -14,10 +15,15 @@ function fill(shapeid){
 }
 </script>
 
+<style>
+svg {
+	max-width: 600px
+}
+</style>
+
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 612 792" style="enable-background:new 0 0 612 792;" xml:space="preserve">
 
-</style>
 <path id="svg0" onclick="fill('svg0')" fill="white" d="M0.1,379c0-31.99,0-63.98,0-95.98c1.49,0.08,2.98,0.26,4.46,0.24c30.73-0.62,61.46-1.27,92.2-1.89
 	c13.46-0.27,26.92-0.51,40.39-0.71c5.79-0.08,11.58-0.01,17.37-0.01c0-0.49,0-0.98,0-1.47c-26.8-13.21-54.56-24.08-82.65-34.23
 	c-14.93-5.39-30.04-8.17-45.89-6.91c-8.91,0.71-17.54-0.79-25.87-4.01C0.1,157.39,0.13,80.74,0,4.09C-0.01,0.67,0.67,0,4.1,0
