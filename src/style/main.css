@@ -2,11 +2,44 @@
 /* RESET */
 /* ----------------------------------------------------- */
 
+@import 'variables.css';
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* ----------------------------------------------------- */
+/* FONTS */
+/* ----------------------------------------------------- */
+
+/* title font - xxix */
+@font-face {
+    font-family: 'xxix';
+    src: url('fonts/xxix.woff2') format('woff2'),
+         url('fonts/xxix.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* body font - signika */
+@font-face {
+    font-family: 'signika';
+    src: url('fonts/signika-regular.woff2') format('woff2'),
+         url('fonts/signika-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* heading font - aller */
+@font-face {
+    font-family: 'aller';
+    src: url('fonts/aller-bd.woff2') format('woff2'),
+         url('fonts/aller-bd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 /* ----------------------------------------------------- */
 /* UTITLITIES */
@@ -27,6 +60,53 @@ section {
 /* ----------------------------------------------------- */
 /* RULES */
 /* ----------------------------------------------------- */
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--body-font);
+}
+
+button {
+    background-color: var(--bg-color);
+    border: 3px solid var(--button-color);
+    color: var(--button-text);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 15px 32px;
+    text-align: center;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-color);
+    color: var(--button-text2);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+h1 {
+    font-family: var(--title-font);
+}
+
+h2 {
+    font-family: var(--heading-font);
+}
+
+img {
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
+    border-radius:100px;
+}
 
 nav {
     padding: 0 1rem;
