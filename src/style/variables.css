@@ -7,7 +7,7 @@
     --button-text: #000000; /* black */
     --button-text2: #ffffff; /* white */
     /* FONTS */
-    --title-font: 'xxix', solid;
+    --title-font: 'xxix';
     --body-font: 'signika', sans-serif;
     --heading-font: 'aller', sans-serif;
   }
