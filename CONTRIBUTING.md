@@ -16,8 +16,8 @@ New feature = new branch. New bugfix = new branch. For every change or addition 
 
 **Never git commit any passwords, personally identifying information, or anything that may compromise the security of the project**.
 
-Please read the 'proper commit message' article but I'll reiterate the two most important points:
-- Write with the imperative mood. All commit messages should start with gitmoji, then Fix/Update/Add/Refactor/Remove. No participles, no past tense. ie. "Adding", "Added". You should be able to scroll back through the git log and say for a given commit, "If I revert back to this commit, it will fix the console log error"
+Please read the 'proper commit message' article but I'll reiterate the most important points:
+- Write with the imperative mood. All commit messages should start with gitmoji, then Fix/Update/Add/Refactor/Remove (first letter should be capitalized). No participles, no past tense. ie. "Adding", "Added". You should be able to scroll back through the git log and say for a given commit, "If I revert back to this commit, the code will... 🔧 Fix the console log error *or*... ✨ Add gallery view *or*... 💄 Update coloring page layout"
 - Keep the commit message below 80 chars. If you did multiple things in a commit, add more lines as needed. 
 
 ## Pull Requests
