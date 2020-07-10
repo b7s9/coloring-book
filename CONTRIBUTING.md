@@ -15,3 +15,11 @@ New feature = new branch. New bugfix = new branch. For every change or addition 
 1. Request a reviewer on the PR, and be open to feedback
 
 **Never git commit any passwords, personally identifying information, or anything that may compromise the security of the project**.
+
+Please read the 'proper commit message' article but I'll reiterate the two most important points:
+- Write with the imperative mood. All commit messages should start with gitmoji, then Fix/Update/Add/Refactor/Remove. No participles, no past tense. ie. "Adding", "Added". You should be able to scroll back through the git log and say for a given commit, "If I revert back to this commit, it will fix the console log error"
+- Keep the commit message below 80 chars. If you did multiple things in a commit, add more lines as needed. 
+
+## Pull Requests
+
+The title of your pull request should summarize the feature or fix e.g. "Fix websocket compatibility on Safari". The first line of the body of the PR should reference the number of the issue it is fixing/resolving by writing "Fixes #12" or "Resolves #55". If the PR resolves multiple issues, create a new line for each reference. If changes are requested on your pull request, do the changes in the branch you opened that PR from, unless otherwise agreed you should open a new branch.
