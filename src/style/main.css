@@ -14,11 +14,11 @@
 /* FONTS */
 /* ----------------------------------------------------- */
 
-/* title font - xxix */
+/* body font - xxix */
 @font-face {
     font-family: 'xxix';
-    src: url('fonts/xxix.woff2') format('woff2'),
-         url('fonts/xxix.woff') format('woff');
+    src: url('../fonts/xxix/xxix.woff2') format('woff2'),
+         url('../fonts/xxix/xxix.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
@@ -26,8 +26,8 @@
 /* body font - signika */
 @font-face {
     font-family: 'signika';
-    src: url('fonts/signika-regular.woff2') format('woff2'),
-         url('fonts/signika-regular.woff') format('woff');
+    src: url('../fonts/signika/signika-regular.woff2') format('woff2'),
+         url('../fonts/signika/signika-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
@@ -35,8 +35,8 @@
 /* heading font - aller */
 @font-face {
     font-family: 'aller';
-    src: url('fonts/aller-bd.woff2') format('woff2'),
-         url('fonts/aller-bd.woff') format('woff');
+    src: url('../fonts/aller/aller-bd.woff2') format('woff2'),
+         url('../fonts/aller/aller-bd.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
@@ -45,16 +45,9 @@
 /* UTITLITIES */
 /* ----------------------------------------------------- */
 
-.border {
-    border: solid #ccc 1px;
-}
-
-.component {
-    border: solid #ccc 1px;
-}
-
-section {
-    border: solid #ccc 1px;
+.navigation {
+    background-color: var(--bg-color);
+    border-bottom: solid #ccc 2px;
 }
 
 /* ----------------------------------------------------- */
@@ -62,50 +55,154 @@ section {
 /* ----------------------------------------------------- */
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--body-color);
     font-family: var(--body-font);
 }
 
-button {
-    background-color: var(--bg-color);
-    border: 3px solid var(--button-color);
-    color: var(--button-text);
-    display: inline-block;
-    font-weight: bold;
-    font-size: 16px;
-    letter-spacing: 2px;
-    padding: 15px 32px;
-    text-align: center;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--button-color);
-    color: var(--button-text2);
-}
-
+/* links */
 a {
     color: var(--link-color);
     text-decoration: none;
 }
 
+/* title */
 h1 {
-    font-family: var(--title-font);
+    font-family: var(--titlefont);
+    font-size: 16px;
 }
 
+/*headings */
 h2 {
     font-family: var(--heading-font);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-img {
-    width: 70px;
-    height: 70px;
+/* description under heading */
+h3 {
+    font-family: var(--body-font);
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+p {
+    font-family: var(--body-font);
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+/* border under welcome desc */
+hr {
+    border-top: 2px solid #e0e0e0;
+    margin-top: 30px;
+}
+
+/* edit icons on pages */
+.editicon {
+    position: relative;
+}
+
+/* overlapping red & blue icons */
+#red {
+    position: absolute;
+    color: var(--button-color);
+    z-index: 2;
+}
+
+#blue {
+    position: absolute;
+    margin-top: 4px !important;
+    margin-left: 4px !important;
+    color: var(--button-color2);
+    z-index: 1;
+}
+
+/* logo style in nav */
+.logo img {
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 3px 0 rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 3px 0 rgba(0,0,0,0.6);
+    border-radius:100px;
+}
+
+/* container for welcome section */
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#welcomeicon {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 175px;
+    height: 175px;
     box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
     -moz-box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
     -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
     -o-box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
     border-radius:100px;
+}
+
+/* center coloring pages into column */
+.coloringpages {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 40px;
+}
+
+/* flex columns */
+.item {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 70%;
+}
+
+/* split rows in columns for tablet + desktop */
+@media only screen and (min-width: 768px) {
+    .coloringpages {
+        flex-direction: row;
+    }
+    .item {
+        width: 35%;
+        height: 35%;
+        margin: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .coloringpages {
+        flex-direction: row;
+    }
+    .item {
+        width: 25%;
+        height: 25%;
+        margin: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+  }
+
+
+/* back shadow on svgs */
+.svgs {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
 }
 
 nav {
@@ -115,11 +212,55 @@ nav {
 nav ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     list-style: none;
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 main {
     margin: 0 auto;
     max-width: 52rem;
 }
+
+/* side navigation */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  /* side nav links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--link-color);
+    display: block;
+    transition: 0.1s;
+  }
+  
+  .sidenav a:hover {
+    color: var(--link-hover);
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

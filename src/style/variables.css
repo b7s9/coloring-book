@@ -1,13 +1,15 @@
 :root {
     /* COLORS */
     --bg-color: #ffffff; /* white */
-    --body-color: #ececec; /* greyish-white */
+    --body-color: #f7f7f7; /* greyish-white */
     --link-color: #0487D9; /* solid blue */
-    --button-color: #35F252; /* solid green */
+    --link-hover: rgb(0, 106, 172); /* dark solid blue */
+    --button-color: #F23838; /* solid red */
+    --button-color2: #00E8FC; /* baby blue */
     --button-text: #000000; /* black */
     --button-text2: #ffffff; /* white */
     /* FONTS */
-    --title-font: 'xxix';
+    --titlefont: 'xxix';
     --body-font: 'signika', sans-serif;
     --heading-font: 'aller', sans-serif;
   }
