@@ -4,7 +4,6 @@ function handleClick(index) {
 
     boxSelect.style.backgroundColor = clickedBoxColor;
 
-    console.log(clickedBoxColor);
 }
 
 let boxColors = ['#00E8FC','#F96E46','#F9C846'];

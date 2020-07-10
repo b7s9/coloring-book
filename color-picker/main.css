@@ -12,10 +12,8 @@
     width: 8rem;
     margin-right: 1rem;
     background-color: #00e8fc;
+    cursor: pointer;
 }
-
-/* #f96e46
-#f9c846 */
 
 h3 {
 margin-top: 9rem;
