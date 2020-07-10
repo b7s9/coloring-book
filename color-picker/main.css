@@ -1,0 +1,35 @@
+.boxes {
+    margin: auto;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+
+.box {
+    border: 3px solid #00e8fc;
+    display: inline-block;
+    height: 8rem;
+    width: 8rem;
+    margin-right: 1rem;
+    background-color: #00e8fc;
+    cursor: pointer;
+}
+
+h3 {
+margin-top: 9rem;
+color: #545863;
+font-size: 16px;
+}
+
+.selected {
+    /* border: 3px solid #00e8fc; */
+    background-color:#00e8fc;
+    height: 8rem;
+    width: 8rem;
+    display: block;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
