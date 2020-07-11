@@ -6,6 +6,10 @@ function handleClick(index) {
 
 }
 
+function fill(shapeid){
+	document.getElementById(shapeid).style.fill = selectedColor
+}
+
 let boxColors = ['#00E8FC','#F96E46','#F9C846'];
 
 const boxOne = document.getElementById ('box-1');
