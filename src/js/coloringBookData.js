@@ -1,5 +1,5 @@
 let coloringBookData = {
-    path:'../SVGs',
+    path:'./SVGs/',
     coloringPageData: [
         {filename:'1.svg',author:'Christina An'},
         {filename:'2.svg',author:'Fiona Lynch'},
