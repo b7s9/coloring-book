@@ -4,6 +4,7 @@ function handleClick(index) {
 
     boxSelect.style.backgroundColor = clickedBoxColor;
 
+    selectedColor = clickedBoxColor;
 }
 
 function fill(shapeid){
