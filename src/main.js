@@ -11,22 +11,12 @@ function fill(shapeid){
 	document.getElementById(shapeid).style.fill = selectedColor
 }
 
-let boxColors = ['#00E8FC','#F96E46','#F9C846'];
+let boxColors = ['#00E8FC','#F96E46','#F9C846',selectedColor];
+const boxes = [document.getElementById('box-1'),document.getElementById('box-2'),document.getElementById('box-3'),document.getElementById('selected')]
 
-const boxOne = document.getElementById ('box-1');
-const boxTwo = document.getElementById ('box-2');
-const boxThree = document.getElementById ('box-3');
 const boxSelect = document.getElementById ('selected');
 
-boxOne.style.border = boxColors [0];
-boxOne.style.backgroundColor = boxColors [0];
-
-boxTwo.style.border = boxColors [1];
-boxTwo.style.backgroundColor = boxColors [1];
-
-boxThree.style.border = boxColors [2];
-boxThree.style.backgroundColor = boxColors [2];
-
-boxSelect.style.border = selectedColor;
-boxSelect.style.backgroundColor = selectedColor;
-
+for (i = 0; i < boxes.length; i++){
+	boxes[i].style.border = boxColors[i]
+	boxes[i].style.backgroundColor = boxColors[i]
+}
