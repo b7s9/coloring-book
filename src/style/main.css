@@ -14,7 +14,7 @@
 /* FONTS */
 /* ----------------------------------------------------- */
 
-/* body font - xxix */
+/* title font - xxix */
 @font-face {
     font-family: 'xxix';
     src: url('../fonts/xxix/xxix.woff2') format('woff2'),
@@ -46,8 +46,8 @@
 /* ----------------------------------------------------- */
 
 .navigation {
-    background-color: var(--bg-color);
-    border-bottom: solid #ccc 2px;
+    background-color: var(--nav-color);
+    border-bottom: solid var(--bg-color) 2px;
 }
 
 /* ----------------------------------------------------- */
@@ -73,23 +73,23 @@ h1 {
 
 /* each letter in the title "COLOR" */
 .c {
-    color: #45C4D8;
+    color: var(--teal);
 }
 
 .o {
-    color: #7CC5D1;
+    color: var(--blue);
 }
 
 .l {
-    color: #7DD17D;
+    color: var(--green);
 }
 
 .oo {
-    color: #EBC970;
+    color: var(--yellow);
 }
 
 .r {
-    color: #D77C5B;
+    color: var(--monored);
 }
 
 span {
@@ -134,18 +134,25 @@ p {
 }
 
 /* overlapping red & blue icons */
-#red {
+#green {
     position: absolute;
-    color: var(--button-color);
+    color: var(--button-green);
     z-index: 2;
 }
 
-#blue {
+#black {
     position: absolute;
     margin-top: 4px !important;
     margin-left: 4px !important;
-    color: var(--button-color2);
+    color: var(--button-black);
     z-index: 1;
+}
+
+h3.author {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
 }
 
 /* logo style in nav */
@@ -231,6 +238,9 @@ p {
 
 /* back shadow on s */
 .thumbnails {
+    border: 4px solid transparent;
+    border-image: linear-gradient(to bottom right, var(--border-blue) 0%, var(--border-green) 25%, var(--border-yellow) 50%, var(--border-orange) 75%, var(--border-red) 100%);
+    border-image-slice: 1;
     width: 100%;
     height: 100%;
     -webkit-box-shadow: 0 8px 6px -6px black;
@@ -266,7 +276,7 @@ main {
     z-index: 3;
     top: 0;
     left: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--nav-color);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
