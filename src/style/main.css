@@ -45,10 +45,6 @@
 /* UTITLITIES */
 /* ----------------------------------------------------- */
 
-.navigation {
-    background-color: var(--nav-color);
-    border-bottom: solid var(--bg-color) 2px;
-}
 
 /* ----------------------------------------------------- */
 /* RULES */
@@ -65,10 +61,24 @@ a {
     text-decoration: none;
 }
 
+
+/* border elements */
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(168, 168, 168, 0.75), rgba(0, 0, 0, 0));
+}
+
 /* title */
 h1 {
     font-family: var(--title-font);
     font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
 }
 
 /* each letter in the title "COLOR" */
@@ -109,6 +119,7 @@ h2 {
 /* description under heading */
 h3 {
     font-family: var(--body-font);
+    font-size: 16px;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -171,6 +182,73 @@ h3.author {
     margin: 15px;
 }
 
+/* section for coloring page */
+.pagesection {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* tools section */
+.tools {
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+/* center tools */
+.centericons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* centers color selector */
+.centericons2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* icons in tools bar */
+#icons {
+    background-image: linear-gradient(180deg, var(--border-green) 0%, var(--border-blue) 37%, var(--border-red) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px;
+}
+
+/* colors in tools bar */
+#redc {
+    background-color: var(--border-red);
+}
+#orangec {
+    background-color: var(--border-orange);
+}
+#yellowc {
+    background-color: var(--border-yellow);
+}
+#greenc {
+    background-color: var(--border-green);
+}
+#bluec {
+    background-color: var(--border-blue);
+}
+
+/* colors in tools section */
+.circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1.5px solid black;
+  }
+
 /* container for welcome section */
 .container {
     padding-top: 30px;
@@ -196,6 +274,11 @@ h3.author {
     flex-direction: column;
     flex-wrap: wrap;
     padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.coloringpages2 {
+    padding-top: 20px;
 }
 
 /* flex columns */
@@ -248,10 +331,18 @@ h3.author {
 	box-shadow: 0 8px 6px -6px black;
 }
 
-
 /* side navigation */
+
+.navigation {
+    background-color: var(--white);
+    border-bottom: solid var(--border-color) 2px;
+}
+
 nav {
     padding: 0 1rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 nav ul {
@@ -276,7 +367,7 @@ main {
     z-index: 3;
     top: 0;
     left: 0;
-    background-color: var(--nav-color);
+    background-color: var(--white);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -308,3 +399,16 @@ main {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+/* footer */
+.footer {
+    display: block;
+    position:absolute;
+    width: 100%;
+    height: 5rem;
+    bottom: 0;
+}
+
+.footer p {
+    padding: 2rem;
+}
