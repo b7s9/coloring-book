@@ -1,26 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style\color-picker.css">
+    <title>Color Picker</title>
+</head>
 <body>
 
-<label>Ensure there is a "#" preceding any hex codes you use here.</label>
-<input type="text" id="hexpicker" value="#FFFF00">
-<br>
+    <div class="boxes">
 
-<script defer>
-function getHex(){
-	return document.getElementById("hexpicker").value
-}
+        <div class="box" 
+        id="box-1"
+        onclick="handleClick(0)">
+            <h3>#00E8FC</h3>
+        </div>
 
-function fill(shapeid){
-	document.getElementById(shapeid).style.fill = getHex()
-}
-</script>
+        <div class="box" 
+        id="box-2"
+        onclick="handleClick(1)">
+            <h3>#F96E46</h3>
+        </div>
 
-<style>
-svg {
-	max-width: 600px
-}
-</style>
+        <div class="box" 
+        id="box-3"
+        onclick="handleClick(2)">
+            <h3>#F9C846</h3>
+        </div>
+     </div>
 
+    <div class="selected">
+        <div class="box" id="selected">
+            <h3>Selected Color</h3>
+        </div>
+    </div>
+
+
+    <script src="js\color-picker.js"></script>
+    
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 612 792" style="enable-background:new 0 0 612 792;" xml:space="preserve">
 
@@ -247,5 +264,6 @@ svg {
 <path class="svgoutline" d="M369.27,333.94c-4.52,0.03-8.56-1.43-11.68-4.64c-4.59-4.71-2.95-12.64,3-15.42c7.4-3.46,15.04-2.53,20.34,2.46
 	c5.18,4.88,4.66,10.56-1.33,14.46C376.79,332.63,372.62,333.9,369.27,333.94z"/>
 </svg>
+
 </body>
 </html>

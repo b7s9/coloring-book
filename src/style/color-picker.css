@@ -33,3 +33,6 @@ font-size: 16px;
     text-align: center;
 }
 
+svg {
+	max-width: 600px
+}
