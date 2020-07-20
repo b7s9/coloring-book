@@ -1,3 +1,4 @@
 {
-    "html.format.wrapAttributes": "aligned-multiple"
+  "html.format.wrapAttributes": "aligned-multiple",
+  "html.format.indentInnerHtml": false
 }
