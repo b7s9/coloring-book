@@ -15,7 +15,7 @@ function handleClick(index) {
 }
 
 function fill(shapeid) {
-	document.getElementById(shapeid).style.fill = selectedColor
+	shapes[shapeid].style.fill = selectedColor
 }
 
 let boxColors = ['#00E8FC', '#F96E46', '#F9C846', selectedColor];
@@ -27,4 +27,12 @@ const ultraSelect = document.getElementById('ultra-selected');
 for (i = 0; i < boxes.length; i++) {
 	boxes[i].style.border = boxColors[i]
 	boxes[i].style.backgroundColor = boxColors[i]
+}
+
+const embed = document.getElementById('svgembed');
+
+const shapes = embed.querySelectorAll('.svgfill');
+
+for (let i = 0; i < shapes.length; i++) {
+	shapes[i].addEventListener("click",function(){fill(i)})
 }
