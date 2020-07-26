@@ -205,15 +205,39 @@ h3.author {
 }
 
 .row.tools {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 /* icons in tools bar */
 .row .fa {
+    color: transparent;
     background-image: linear-gradient(180deg, var(--border-green) 0%, var(--border-blue) 37%, var(--border-red) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
     padding: 10px;
+}
+
+/* colors in tools section */
+.row button {
+    border-radius: 20%;
+    border: 1.5px solid black;
+    font-size: 1.25rem;
+    height: 3rem;
+    opacity: 1;
+    width: 3rem;
+}
+
+.row .swatch button {
+    border-radius: 50%;
+}
+
+.row button:hover,
+.row button:focus {
+    border: 2px solid #444444;
+}
+
+.row button:active {
+    border: 2px solid var(--link-color);
+    opacity: 0.8;
 }
 
 /* colors in tools bar */
@@ -235,25 +259,6 @@ h3.author {
 
 #bluec {
     background-color: var(--border-blue);
-}
-
-/* colors in tools section */
-.swatch button {
-    border-radius: 50%;
-    border: 1.5px solid black;
-    height: 40px;
-    opacity: 1;
-    /* transition: border 90ms ease-in-out; */
-    width: 40px;
-}
-
-.swatch button:active {
-    opacity: 0.6;
-}
-
-.swatch button:hover,
-.swatch button:focus {
-    border: 2px solid #444444;
 }
 
 /* container for welcome section */
