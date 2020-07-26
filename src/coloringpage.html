@@ -38,31 +38,51 @@
             </ul>
         </nav>
 
-        <!-- coloring pages -->
-        <div class="coloringpages2">
-            <div class="pagesection">
-                <img src="thumbnails/1.jpg" class="thumbnails">
-                <h3 class="author">By: Christina An</h3>
-                <div class="tools">
-                    <div class="centericons">
-                        <i class="fa fa-paint-brush fa-2x" aria-hidden="true" id="icons"></i>
-                        <i class="fa fa-undo fa-2x" aria-hidden="true" id="icons"></i>
-                        <i class="fa fa-repeat fa-2x" aria-hidden="true" id="icons"></i>
-                        <i class="fa fa-download fa-2x" aria-hidden="true" id="icons"></i>
-                    </div>
-                    <div class="centericons2">
-                        <div class="circle" id="redc"></div>
-                        <div class="circle" id="orangec"></div>
-                        <div class="circle" id="yellowc"></div>
-                        <div class="circle" id="greenc"></div>
-                        <div class="circle" id="bluec"></div>
-                    </div>
-                </div>
+        <main>
+            <div class="canvas component">
+                <div id="coloring-page" class="interactable"></div>
+                <h3 class="author">Author Name</h3>
             </div>
-        </div>
-
+            <div class="drawer component">
+                <ul class="row tools">
+                    <li class="undo">
+                        <button>
+                            <i class="fa fa-undo"></i>
+                        </button>
+                    </li>
+                    <li class="redo">
+                        <button>
+                            <i class="fa fa-repeat"></i>
+                        </button>
+                    </li>
+                    <li class="download">
+                        <button>
+                            <i class="fa fa-download"></i>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="row color-picker">
+                    <li class="ultra-color-picker">
+                        <!-- this opens the extended color picker component -->
+                        <button>
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                    </li>
+                    <li class="swatch">
+                        <button onclick="console.log('hello world')" data-color="#fac"></button>
+                    </li>
+                    <li class="swatch">
+                        <button data-color="#987432"></button>
+                    </li>
+                    <li class="swatch">
+                        <button data-color="#457890"></button>
+                    </li>
+                </ul>
+            </div>
+        </main>
 
         <script src="js/main.js"></script>
+        <script src="js/generatePage.js" type="module"></script>
     </body>
 
 </html>
