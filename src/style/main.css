@@ -17,8 +17,7 @@
 /* title font - xxix */
 @font-face {
     font-family: 'xxix';
-    src: url('../fonts/xxix/xxix.woff2') format('woff2'),
-        url('../fonts/xxix/xxix.woff') format('woff');
+    src: url('../fonts/xxix/xxix.woff2') format('woff2'), url('../fonts/xxix/xxix.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -35,8 +34,7 @@
 /* heading font - aller */
 @font-face {
     font-family: 'aller';
-    src: url('../fonts/aller/aller-bd.woff2') format('woff2'),
-        url('../fonts/aller/aller-bd.woff') format('woff');
+    src: url('../fonts/aller/aller-bd.woff2') format('woff2'), url('../fonts/aller/aller-bd.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -44,7 +42,6 @@
 /* ----------------------------------------------------- */
 /* UTITLITIES */
 /* ----------------------------------------------------- */
-
 
 /* ----------------------------------------------------- */
 /* RULES */
@@ -60,7 +57,6 @@ a {
     color: var(--link-color);
     text-decoration: none;
 }
-
 
 /* border elements */
 hr {
@@ -289,6 +285,7 @@ h3.author {
 .item {
     width: 80%;
     height: 80%;
+    margin-bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -328,13 +325,24 @@ h3.author {
 /* back shadow on s */
 .thumbnails {
     border: 4px solid transparent;
-    border-image: linear-gradient(to bottom right, var(--border-blue) 0%, var(--border-green) 25%, var(--border-yellow) 50%, var(--border-orange) 75%, var(--border-red) 100%);
-    border-image-slice: 1;
     width: 100%;
-    height: 100%;
+    height: auto;
     -webkit-box-shadow: 0 8px 6px -6px black;
     -moz-box-shadow: 0 8px 6px -6px black;
     box-shadow: 0 8px 6px -6px black;
+}
+
+.thumbnails:hover,
+.thumbnails:focus {
+    border-image: linear-gradient(
+        to bottom right,
+        var(--border-blue) 0%,
+        var(--border-green) 25%,
+        var(--border-yellow) 50%,
+        var(--border-orange) 75%,
+        var(--border-red) 100%
+    );
+    border-image-slice: 1;
 }
 
 /* side navigation */
