@@ -9,3 +9,6 @@ max_line_length = 120
 
 [*.html]
 max_line_length = 120
+
+[*.css]
+max_line_length = 120
