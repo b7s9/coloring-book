@@ -18,28 +18,28 @@
 @font-face {
     font-family: 'xxix';
     src: url('../fonts/xxix/xxix.woff2') format('woff2'),
-         url('../fonts/xxix/xxix.woff') format('woff');
+        url('../fonts/xxix/xxix.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
 /* body font - signika */
 @font-face {
     font-family: 'signika';
     src: url('../fonts/signika/signika-regular.woff2') format('woff2'),
-         url('../fonts/signika/signika-regular.woff') format('woff');
+        url('../fonts/signika/signika-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
 /* heading font - aller */
 @font-face {
     font-family: 'aller';
     src: url('../fonts/aller/aller-bd.woff2') format('woff2'),
-         url('../fonts/aller/aller-bd.woff') format('woff');
+        url('../fonts/aller/aller-bd.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
 /* ----------------------------------------------------- */
 /* UTITLITIES */
@@ -70,13 +70,13 @@ hr {
 }
 
 /* title */
-h1 {
+nav span.display {
     font-family: var(--title-font);
     font-size: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-    h1 {
+    nav span.display {
         font-size: 20px;
     }
 }
@@ -170,11 +170,11 @@ h3.author {
 .logo img {
     width: 35px;
     height: 35px;
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.6);
-    -moz-box-shadow: 0 0 3px 0 rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.6);
-    -o-box-shadow: 0 0 3px 0 rgba(0,0,0,0.6);
-    border-radius:100px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
 }
 
 /* section spacing */
@@ -228,15 +228,19 @@ h3.author {
 #redc {
     background-color: var(--border-red);
 }
+
 #orangec {
     background-color: var(--border-orange);
 }
+
 #yellowc {
     background-color: var(--border-yellow);
 }
+
 #greenc {
     background-color: var(--border-green);
 }
+
 #bluec {
     background-color: var(--border-blue);
 }
@@ -247,7 +251,7 @@ h3.author {
     width: 40px;
     border-radius: 50%;
     border: 1.5px solid black;
-  }
+}
 
 /* container for welcome section */
 .container {
@@ -261,11 +265,11 @@ h3.author {
     margin-right: auto;
     width: 175px;
     height: 175px;
-    box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
-    -o-box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
-    border-radius:100px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
 }
 
 /* center coloring pages into column */
@@ -294,6 +298,7 @@ h3.author {
     .coloringpages {
         flex-direction: row;
     }
+
     .item {
         width: 35%;
         height: 35%;
@@ -301,12 +306,13 @@ h3.author {
         margin-left: auto;
         margin-right: auto;
     }
-  }
+}
 
-  @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .coloringpages {
         flex-direction: row;
     }
+
     .item {
         width: 25%;
         height: 25%;
@@ -317,7 +323,7 @@ h3.author {
         padding-left: 50px;
         padding-right: 50px;
     }
-  }
+}
 
 /* back shadow on s */
 .thumbnails {
@@ -327,8 +333,8 @@ h3.author {
     width: 100%;
     height: 100%;
     -webkit-box-shadow: 0 8px 6px -6px black;
-	-moz-box-shadow: 0 8px 6px -6px black;
-	box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 /* side navigation */
@@ -371,39 +377,44 @@ main {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-  }
-  
-  /* side nav links */
-  .sidenav a {
+}
+
+/* side nav links */
+.sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 18px;
     color: var(--link-color);
     display: block;
     transition: 0.1s;
-  }
-  
-  .sidenav a:hover {
+}
+
+.sidenav a:hover {
     color: var(--link-hover);
-  }
-  
-  .sidenav .closebtn {
+}
+
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
 
 /* footer */
 .footer {
     display: block;
-    position:absolute;
+    position: absolute;
     width: 100%;
     height: 5rem;
     bottom: 0;
