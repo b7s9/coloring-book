@@ -220,6 +220,7 @@ h3.author {
 .row button {
     border-radius: 20%;
     border: 1.5px solid black;
+    cursor: pointer;
     font-size: 1.25rem;
     height: 3rem;
     opacity: 1;
