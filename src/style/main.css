@@ -70,13 +70,15 @@ hr {
 }
 
 /* title */
-h1 {
+span {
+    display: inline-block;
     font-family: var(--title-font);
     font-size: 16px;
+    
 }
 
 @media only screen and (min-width: 768px) {
-    h1 {
+    span {
         font-size: 20px;
     }
 }
@@ -104,6 +106,11 @@ h1 {
 
 span {
     letter-spacing: -1px;
+}
+
+h1 {
+    text-align: center;
+    font-family: var(--heading-font);
 }
 
 /*headings */
@@ -139,25 +146,6 @@ p {
     margin-top: 30px;
 }
 
-/* edit icons on pages */
-.editicon {
-    position: relative;
-}
-
-/* overlapping red & blue icons */
-#green {
-    position: absolute;
-    color: var(--button-green);
-    z-index: 2;
-}
-
-#black {
-    position: absolute;
-    margin-top: 4px !important;
-    margin-left: 4px !important;
-    color: var(--button-black);
-    z-index: 1;
-}
 
 h3.author {
     text-align: left;
@@ -182,20 +170,20 @@ h3.author {
     margin: 15px;
 }
 
-/* section for coloring page */
-.pagesection {
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /* tools section */
 .tools {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     background-color: var(--white);
     width: 100%;
-    height: 100%;
+    height: 23vh;
+    bottom: 0;
     position: fixed;
+    -webkit-box-shadow: 0px -4px 8px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -4px 8px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px -4px 8px -5px rgba(0,0,0,0.75);
+    overflow: scroll;
 }
 
 /* center tools */
@@ -214,6 +202,7 @@ h3.author {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 10px;
 }
 
 /* icons in tools bar */
@@ -221,7 +210,7 @@ h3.author {
     background-image: linear-gradient(180deg, var(--border-green) 0%, var(--border-blue) 37%, var(--border-red) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 10px;
+    margin: 10px;
 }
 
 /* colors in tools bar */
@@ -240,6 +229,18 @@ h3.author {
 #bluec {
     background-color: var(--border-blue);
 }
+#purplec {
+    background-color: var(--border-purple);
+}
+#pinkc {
+    background-color: var(--border-pink);
+}
+
+/* rainbow wheel */
+#rainbowwheel {
+    background-image: linear-gradient(319deg, var(--border-green) 15%, var(--border-blue) 30%, var(--border-red) 100%);    
+}
+
 
 /* colors in tools section */
 .circle {
@@ -277,16 +278,90 @@ h3.author {
     padding-bottom: 40px;
 }
 
+/* container for page */
 .coloringpages2 {
-    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 290px;
 }
 
-/* flex columns */
+/* coloringpage - flex columns */
+.item2 {
+    width: 100%;
+    height: 100%; 
+}
+
+/* coloring pages in full view w/o border */
+#wothumbnails {
+    width: 100%;
+    height: 100%;
+}
+
+/* responsive for coloring page */
+@media only screen and (min-width: 768px) {
+    /* coloringpage section */
+    .coloringpages2 {
+        height: 740px
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .coloringpages2 {
+        height: 600px;
+  }
+}
+
+/* enlarge font awesome icons for tools */
+.enlargeicons {
+    display: none;
+}
+
+/* responsive for coloring page */
+@media only screen and (min-width: 768px) {
+    /* tools section */
+    .tools {
+        height: 20vh;
+    }
+    .enlargeicons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: show;
+    }
+    .centericons {
+        display: none;
+    }
+    .circle {
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        border: 2.5px solid black;
+    }
+    #icons {
+        margin: 20px;
+    }
+}
+/* responsive for coloring page */
+@media only screen and (min-width: 1024px) {
+    /* tools section */
+    .tools {
+        height: 30vh;
+        width: auto;
+        margin-left: auto;
+    }
+}
+
+/* homepage - flex columns */
 .item {
     width: 80%;
     height: 80%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* split rows in columns for tablet + desktop */
@@ -319,16 +394,16 @@ h3.author {
     }
   }
 
-/* back shadow on s */
-.thumbnails {
+/* thumbnails of coloring pages on homepage */
+#thumbnails {
     border: 4px solid transparent;
     border-image: linear-gradient(to bottom right, var(--border-blue) 0%, var(--border-green) 25%, var(--border-yellow) 50%, var(--border-orange) 75%, var(--border-red) 100%);
     border-image-slice: 1;
     width: 100%;
-    height: 100%;
+    height: auto;
     -webkit-box-shadow: 0 8px 6px -6px black;
 	-moz-box-shadow: 0 8px 6px -6px black;
-	box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 /* side navigation */
@@ -412,3 +487,5 @@ main {
 .footer p {
     padding: 2rem;
 }
+
+
