@@ -1,0 +1,22 @@
+{
+  "name": "coloring-book",
+  "version": "0.1.0",
+  "description": "Experimental project for IDM t-380",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b7s9/coloring-book.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b7s9/coloring-book/issues"
+  },
+  "homepage": "https://github.com/b7s9/coloring-book#readme",
+  "dependencies": {
+    "a-color-picker": "^1.2.1"
+  }
+}
