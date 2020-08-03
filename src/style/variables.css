@@ -1,0 +1,27 @@
+:root {
+    /* COLORS */
+    --white: #ffffff; /* white */
+    --border-color: #ccc; /* light-greyish color */
+    --body-color: #ececec; /* greyish-white */
+    /* LINKS */
+    --link-color: #0487d9; /* solid blue */
+    --link-hover: #000000; /* black */
+    /* BUTTON ~ MIKAYLA'S COLOR PALETTE */
+    --button-green: #35f252; /* solid green */
+    --button-black: #000000; /* black */
+    --border-blue: #0487d9; /* blue */
+    --border-green: #35f252; /* green */
+    --border-yellow: #e0f200; /* yellow */
+    --border-orange: #fec837; /* orange */
+    --border-red: #f23838; /* red */
+    /* FONTS */
+    --title-font: 'xxix', sans-serif;
+    --body-font: 'signika', sans-serif;
+    --heading-font: 'aller', sans-serif;
+    /* THEME COLORS ~ DEVIN'S COLOR PALETTE */
+    --teal: #45c4d8;
+    --blue: #7cc5d1;
+    --green: #7dd17d;
+    --yellow: #ebc970;
+    --monored: #d77c5b;
+}
