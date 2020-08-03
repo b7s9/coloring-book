@@ -48,33 +48,42 @@
 /* ----------------------------------------------------- */
 
 body {
+    font-size: 100%;
     background-color: var(--body-color);
     font-family: var(--body-font);
 }
 
-/* links */
-a {
-    color: var(--link-color);
-    text-decoration: none;
+main {
+    margin: 0 auto;
+    max-width: 52rem;
 }
 
-/* border elements */
-hr {
-    border: 0;
-    height: 2px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(168, 168, 168, 0.75), rgba(0, 0, 0, 0));
-}
-
-/* title */
 nav span.display {
     font-family: var(--title-font);
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
     nav span.display {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
+}
+
+h2 {
+    font-family: var(--heading-font);
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h3 {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
 }
 
 /* each letter in the title "COLOR" */
@@ -98,32 +107,20 @@ nav span.display {
     color: var(--monored);
 }
 
-span {
-    letter-spacing: -1px;
+a {
+    color: var(--link-color);
+    text-decoration: none;
 }
 
-/*headings */
-h2 {
-    font-family: var(--heading-font);
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* description under heading */
-h3 {
-    font-family: var(--body-font);
-    font-size: 16px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(168, 168, 168, 0.75), rgba(0, 0, 0, 0));
 }
 
 p {
     font-family: var(--body-font);
-    font-size: 16px;
+    font-size: 1rem;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -162,62 +159,82 @@ h3.author {
     padding-top: 10px;
 }
 
-/* logo style in nav */
-.logo img {
-    width: 35px;
-    height: 35px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    -o-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    border-radius: 100px;
-}
-
 /* section spacing */
 .section {
     margin: 15px;
 }
 
 /* section for coloring page */
-.pagesection {
-    width: 100%;
-    height: 100%;
+.coloring-page {
+    height: inherit;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+}
+
+.coloring-page #canvas {
+    height: calc(100vh - 265px);
+    width: inherit;
+}
+
+.coloring-page #canvas object {
+    height: inherit;
+    margin: 0 auto;
+    width: inherit;
 }
 
 /* tools section */
-.tools {
+.drawer {
     background-color: var(--white);
-    width: 100%;
-    height: 100%;
-    position: fixed;
+    margin-bottom: 2rem;
+    padding: 1rem;
 }
 
-/* center tools */
-.centericons {
-    display: flex;
-    justify-content: center;
+.row {
     align-items: center;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
-
-/* centers color selector */
-.centericons2 {
-    display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    list-style-type: none;
+    width: 100%;
+}
+
+.row.tools {
+    margin-bottom: 1rem;
 }
 
 /* icons in tools bar */
-#icons {
+.row .fa {
+    color: transparent;
     background-image: linear-gradient(180deg, var(--border-green) 0%, var(--border-blue) 37%, var(--border-red) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
     padding: 10px;
+}
+
+/* colors in tools section */
+.row button {
+    border-radius: 20%;
+    border: 1.5px solid black;
+    cursor: pointer;
+    font-size: 1.25rem;
+    height: 3rem;
+    opacity: 1;
+    width: 3rem;
+}
+
+.row .swatch button {
+    border-radius: 50%;
+}
+
+.row button:hover,
+.row button:focus {
+    border: 2px solid #444444;
+}
+
+.row button:active {
+    border: 2px solid var(--link-color);
+    opacity: 0.8;
 }
 
 /* colors in tools bar */
@@ -239,14 +256,6 @@ h3.author {
 
 #bluec {
     background-color: var(--border-blue);
-}
-
-/* colors in tools section */
-.circle {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: 1.5px solid black;
 }
 
 /* container for welcome section */
@@ -277,7 +286,7 @@ h3.author {
     padding-bottom: 40px;
 }
 
-.coloringpages2 {
+main {
     padding-top: 20px;
 }
 
@@ -334,14 +343,12 @@ h3.author {
 
 .thumbnails:hover,
 .thumbnails:focus {
-    border-image: linear-gradient(
-        to bottom right,
-        var(--border-blue) 0%,
-        var(--border-green) 25%,
-        var(--border-yellow) 50%,
-        var(--border-orange) 75%,
-        var(--border-red) 100%
-    );
+    border-image: linear-gradient(to bottom right,
+            var(--border-blue) 0%,
+            var(--border-green) 25%,
+            var(--border-yellow) 50%,
+            var(--border-orange) 75%,
+            var(--border-red) 100%);
     border-image-slice: 1;
 }
 
@@ -369,9 +376,15 @@ nav ul {
     padding-bottom: 1rem;
 }
 
-main {
-    margin: 0 auto;
-    max-width: 52rem;
+/* logo style in nav */
+.logo img {
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
 }
 
 .sidenav {
@@ -391,7 +404,7 @@ main {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--link-color);
     display: block;
     transition: 0.1s;
@@ -405,7 +418,7 @@ main {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 2.25rem;
     margin-left: 50px;
 }
 
@@ -415,7 +428,7 @@ main {
     }
 
     .sidenav a {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }
 
