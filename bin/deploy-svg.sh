@@ -2,6 +2,10 @@
 local_asset_dir='src/SVGs/'
 remote_asset_dir='/var/www/b7s9.com/html/coloring-book/src/SVGs/'
 
+echo ''
+echo 'This script relies on Bens private key to the remote server.'
+echo ''
+
 # if [ -z "$1" ]
 # then
 # 	# run script for all assets 
