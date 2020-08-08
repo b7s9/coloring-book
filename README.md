@@ -7,7 +7,25 @@ This is where we will describe what this project does
 tbd
 
 ## Installation Instructions
-tbd
+
+Install dependencies
+```
+cd $this_project_directory
+npm install
+npm install -g http-server
+```
+if you haven't set permissions on your local folders, you may need to install `http-server` with `sudo`
+```
+sudo npm install -g http-server
+```
+Build project (tbd)
+
+Serve project on localhost
+```
+cd $this_project_directory
+http-server ./src -s -c-1
+```
+The project will then be available on http://localhost:8080
 
 ## Project Requirements
 [Full requirements](https://github.com/philsinatra/IDM-T380/blob/master/docs/project.md) doc on Phil's repo
@@ -15,12 +33,12 @@ tbd
 ### Must Haves
 
 - [ ] Color Picker
-- [ ] Image library (multiple coloring pages)
-- [ ] Attribution for each image
+- [x] Image library (multiple coloring pages)
+- [x] Attribution for each image
 - [ ] Works on mobile devices, viewports ranging 360 – 1440px
 - [ ] Built with task runners, bundlers, scripts, continuous integration, git hooks etc.
 - [x] Built with Git
-- [ ] Runs on live production server
+- [x] Runs on live production server
 
 ### Nice to Haves
 - [ ] Export svg/png/jpg
