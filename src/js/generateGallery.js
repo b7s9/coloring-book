@@ -5,8 +5,7 @@ const gallery = document.getElementById('gallery');
 // thumbnail template 
 /* <div class="item">
 	<div class="icon-container">
-		<i class="fa fa-pencil-square fa-3x" id="green" aria-hidden="true"></i>
-		<i class="fa fa-pencil-square fa-3x" id="black" aria-hidden="true"></i>
+		<i class="fa fa-pencil-square fa-3x" aria-hidden="true"></i>
 	</div>
 	<a href="./coloringpage.html#0">
 		<img src="thumbnails/1.jpg" class="thumbnails">
@@ -32,7 +31,7 @@ for (const [iterator, image] of coloringBookData.coloringPageData.entries()) {
 	iconContainer.appendChild(icon);
 
 	const link = document.createElement('a');
-	link.href = `./coloringpage.html#${i}`;
+	link.href = `./coloringpage.html#${i - 1}`;
 	item.appendChild(link);
 
 	const img = document.createElement('img');
