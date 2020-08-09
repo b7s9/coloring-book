@@ -39,7 +39,7 @@ The project will then be available on http://localhost:8080. (it should automati
 
 ### Nice to Haves
 - [ ] Export svg/png/jpg
-- [ ] Undo steps feature
+- [x] Undo/Redo steps feature
 - [ ] Save/Load
 - [ ] Sharable link
 - [ ] Multi-user live editing (google docs)
