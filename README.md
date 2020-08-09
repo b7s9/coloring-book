@@ -9,23 +9,20 @@ tbd
 ## Installation Instructions
 
 Install dependencies
+
 ```
 cd $this_project_directory
 npm install
-npm install -g http-server
 ```
-if you haven't set permissions on your local folders, you may need to install `http-server` with `sudo`
-```
-sudo npm install -g http-server
-```
+
 Build project (tbd)
 
 Serve project on localhost
 ```
 cd $this_project_directory
-http-server ./src -s -c-1
+npm run serve
 ```
-The project will then be available on http://localhost:8080
+The project will then be available on http://localhost:8080. (it should automatically open in your default browser)
 
 ## Project Requirements
 [Full requirements](https://github.com/philsinatra/IDM-T380/blob/master/docs/project.md) doc on Phil's repo
