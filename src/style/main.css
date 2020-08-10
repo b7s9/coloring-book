@@ -133,23 +133,16 @@ p {
 }
 
 /* edit icons on pages */
-.editicon {
+.thumbnail-icon-container {
     position: relative;
 }
 
-/* overlapping red & blue icons */
-#green {
-    position: absolute;
+/* overlapping green and black icons */
+.thumbnail-icon {
     color: var(--button-green);
-    z-index: 2;
-}
-
-#black {
     position: absolute;
-    margin-top: 4px !important;
-    margin-left: 4px !important;
-    color: var(--button-black);
-    z-index: 1;
+    text-shadow: 4px 4px var(--button-black);
+    z-index: 2;
 }
 
 h3.author {
@@ -278,7 +271,7 @@ h3.author {
 }
 
 /* center coloring pages into column */
-.coloringpages {
+#gallery {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -301,7 +294,7 @@ main {
 
 /* split rows in columns for tablet + desktop */
 @media only screen and (min-width: 768px) {
-    .coloringpages {
+    #gallery {
         flex-direction: row;
     }
 
@@ -315,7 +308,7 @@ main {
 }
 
 @media only screen and (min-width: 1024px) {
-    .coloringpages {
+    #gallery {
         flex-direction: row;
     }
 
