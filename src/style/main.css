@@ -78,33 +78,30 @@ h2 {
     padding-right: 20px;
 }
 
-h3 {
-    font-family: var(--body-font);
-    font-size: 1rem;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-}
-
 /* each letter in the title "COLOR" */
 .c {
     color: var(--teal);
+    letter-spacing: -2px;
 }
 
 .o {
     color: var(--blue);
+    letter-spacing: -2px;
 }
 
 .l {
     color: var(--green);
+    letter-spacing: -2px;
 }
 
 .oo {
     color: var(--yellow);
+    letter-spacing: -2px;
 }
 
 .r {
     color: var(--monored);
+    letter-spacing: -2px;
 }
 
 a {
@@ -116,14 +113,6 @@ hr {
     border: 0;
     height: 2px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(168, 168, 168, 0.75), rgba(0, 0, 0, 0));
-}
-
-p {
-    font-family: var(--body-font);
-    font-size: 1rem;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
 }
 
 /* hr element - border under welcome desc */
@@ -147,14 +136,97 @@ p {
 
 h3.author {
     text-align: left;
-    margin: 0;
+    margin: 10px;
     padding: 0;
     padding-top: 10px;
+
+}
+
+/* help page */
+.icon {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .icon {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+#boxs {
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
+    border-radius:100px;
+}
+
+img#helppics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    img#helppics {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    img#helppics {
+        width: 25%;
+    }
+}
+
+/* container for faq section */
+.container {
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 /* section spacing */
 .section {
     margin: 15px;
+}
+
+h3 {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    h3 {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+h3.steps {
+    text-align: center;
+    padding-top: 10px;
+}
+
+p {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
 }
 
 /* section for coloring page */
@@ -179,8 +251,8 @@ h3.author {
 /* tools section */
 .drawer {
     background-color: var(--white);
-    margin-bottom: 2rem;
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .row {
@@ -201,19 +273,20 @@ h3.author {
 .row .fa {
     color: transparent;
     background-image: linear-gradient(180deg, var(--border-green) 0%, var(--border-blue) 37%, var(--border-red) 100%);
-    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* needed to clip gradient to icons */
     padding: 10px;
 }
 
 /* colors in tools section */
 .row button {
-    border-radius: 20%;
+    border-radius: 50%;
     border: 1.5px solid black;
     cursor: pointer;
     font-size: 1.25rem;
-    height: 3rem;
+    height: 2.9rem;
     opacity: 1;
-    width: 3rem;
+    width: 2.9rem;
 }
 
 .row .swatch button {
@@ -223,6 +296,7 @@ h3.author {
 .row button:hover,
 .row button:focus {
     border: 2px solid #444444;
+    outline: none;
 }
 
 .row button:active {
@@ -249,12 +323,6 @@ h3.author {
 
 #bluec {
     background-color: var(--border-blue);
-}
-
-/* container for welcome section */
-.container {
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 #welcomeicon {
@@ -293,14 +361,14 @@ main {
 }
 
 /* split rows in columns for tablet + desktop */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 320px) {
     #gallery {
         flex-direction: row;
     }
 
     .item {
-        width: 35%;
-        height: 35%;
+        width: 45%;
+        height: 45%;
         margin: 20px;
         margin-left: auto;
         margin-right: auto;
@@ -361,23 +429,12 @@ nav {
 
 nav ul {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-
-/* logo style in nav */
-.logo img {
-    width: 35px;
-    height: 35px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    -o-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    border-radius: 100px;
 }
 
 .sidenav {
@@ -425,6 +482,25 @@ nav ul {
     }
 }
 
+/* case study */
+main h1 {
+    text-align: center;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 /* footer */
 .footer {
     display: block;
@@ -437,3 +513,4 @@ nav ul {
 .footer p {
     padding: 2rem;
 }
+
