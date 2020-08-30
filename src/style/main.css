@@ -53,11 +53,6 @@ body {
     font-family: var(--body-font);
 }
 
-main {
-    margin: 0 auto;
-    max-width: 52rem;
-}
-
 nav span.display {
     font-family: var(--title-font);
     font-size: 1rem;
@@ -74,8 +69,6 @@ h2 {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 /* each letter in the title "COLOR" */
@@ -485,15 +478,20 @@ nav ul {
 /* case study */
 main h1 {
     text-align: center;
+    padding: 30px;
 }
 
-li {
-    text-decoration: none;
-    list-style: none;
+ul.cardsort {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 768px) {
+    ul.cardsort {
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+     }
 }
 
 section {
@@ -501,16 +499,36 @@ section {
     padding-bottom: 30px;
 }
 
-/* footer */
-.footer {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 5rem;
-    bottom: 0;
+.card-image > img {
+	display: block;
+	width: 100%;
 }
 
-.footer p {
-    padding: 2rem;
+.card {
+	display: inline-block;
+	width: 100%;
+    max-width: 20rem;
+	margin: 1rem;
+	font-size: 1rem;
+	text-decoration: none;
+	overflow: hidden;
+	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-description {
+	display: block;
+	color: #515151;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.card-description p {
+    padding: 0.15em;
 }
 
