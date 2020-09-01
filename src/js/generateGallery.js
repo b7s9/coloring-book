@@ -4,14 +4,13 @@ const gallery = document.getElementById('gallery');
 
 // thumbnail template 
 /* <div class="item">
-	<div class="icon-container">
-		<i class="fa fa-pencil-square fa-3x" aria-hidden="true"></i>
-	</div>
 	<a href="./coloringpage.html#0">
 		<img src="thumbnails/1.jpg" class="thumbnails">
 	</a>
-	<h3 class="author">By: Christina An</h3>
-</div> */
+	<div class="attribution">
+		<h3 class="author-prefix">By:</h3>
+		<h3 class="author">author's name</h3>
+	</div> */
 
 gallery.innerHTML = ''
 
@@ -20,15 +19,6 @@ for (const [iterator, image] of coloringBookData.coloringPageData.entries()) {
 
 	const item = document.createElement('div');
 	item.classList.add('item');
-
-	const iconContainer = document.createElement('div')
-	iconContainer.classList.add('thumbnail-icon-container');
-	item.appendChild(iconContainer);
-
-	const icon = document.createElement('i');
-	icon.classList.add('fa', 'fa-pencil-square', 'fa-3x', 'thumbnail-icon');
-	icon.setAttribute('aria-hidden', 'true');
-	iconContainer.appendChild(icon);
 
 	const link = document.createElement('a');
 	link.href = `./coloringpage.html#${i - 1}`;
@@ -40,10 +30,19 @@ for (const [iterator, image] of coloringBookData.coloringPageData.entries()) {
 	img.classList.add('thumbnails');
 	link.appendChild(img);
 
+	const attribution = document.createElement('div');
+	attribution.classList.add('attribution');
+	item.appendChild(attribution)
+
+	const authorPrefix = document.createElement('h3');
+	authorPrefix.classList.add('author-prefix')
+	authorPrefix.innerText = `By: `
+	attribution.appendChild(authorPrefix)
+
 	const author = document.createElement('h3');
 	author.classList.add('author')
-	author.innerText = `By: ${image.author}`
-	item.appendChild(author)
+	author.innerText = `${image.author}`
+	attribution.appendChild(author)
 
 	gallery.appendChild(item)
 }
