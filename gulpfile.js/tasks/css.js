@@ -11,7 +11,7 @@ const destDir = path.join(__dirname, '../../dist/style')
 function _minifyCss() {
 	return src(srcDir)
 		.pipe(sourcemaps.init())
-		.pipe(concat('main.min.css'))
+		.pipe(concat('main.css'))
 		.pipe(cleanCSS({ compatibility: 'ie8' }))
 		.pipe(sourcemaps.write('.'))
 		.pipe(dest(destDir))
