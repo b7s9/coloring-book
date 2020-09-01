@@ -4,7 +4,8 @@
   "description": "Experimental project for IDM t-380",
   "main": "index.html",
   "scripts": {
-    "serve": "http-server src/ -s -o -c-1",
+    "serve": "http-server dist/ -s -o -c-1",
+    "start": "npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
