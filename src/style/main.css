@@ -2,7 +2,7 @@
 /* RESET */
 /* ----------------------------------------------------- */
 
-@import 'variables.css';
+/* @import 'variables.css'; */
 
 * {
     box-sizing: border-box;
@@ -132,7 +132,6 @@ h3.author {
     margin: 10px;
     padding: 0;
     padding-top: 10px;
-
 }
 
 /* help page */
@@ -153,11 +152,11 @@ h3.author {
 }
 
 #boxs {
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
-    -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
-    -o-box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
-    border-radius:100px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
 }
 
 img#helppics {
@@ -167,7 +166,7 @@ img#helppics {
     width: 90%;
     height: auto;
     margin: 0 auto;
-    box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (min-width: 768px) {
@@ -397,12 +396,14 @@ main {
 
 .thumbnails:hover,
 .thumbnails:focus {
-    border-image: linear-gradient(to bottom right,
-            var(--border-blue) 0%,
-            var(--border-green) 25%,
-            var(--border-yellow) 50%,
-            var(--border-orange) 75%,
-            var(--border-red) 100%);
+    border-image: linear-gradient(
+        to bottom right,
+        var(--border-blue) 0%,
+        var(--border-green) 25%,
+        var(--border-yellow) 50%,
+        var(--border-orange) 75%,
+        var(--border-red) 100%
+    );
     border-image-slice: 1;
 }
 
@@ -488,10 +489,10 @@ ul.cardsort {
 
 @media only screen and (max-width: 768px) {
     ul.cardsort {
-        flex-direction: column; 
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-     }
+    }
 }
 
 section {
@@ -500,30 +501,30 @@ section {
 }
 
 .card-image > img {
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .card {
-	display: inline-block;
-	width: 100%;
+    display: inline-block;
+    width: 100%;
     max-width: 20rem;
-	margin: 1rem;
-	font-size: 1rem;
-	text-decoration: none;
-	overflow: hidden;
-	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
-	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+    margin: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
 }
 
 .card:hover {
-	transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+    transform: translateY(-0.5rem) scale(1.0125);
+    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 .card-description {
-	display: block;
-	color: #515151;
+    display: block;
+    color: #515151;
     text-decoration: none;
     padding: 1em;
 }
@@ -531,4 +532,3 @@ section {
 .card-description p {
     padding: 0.15em;
 }
-
