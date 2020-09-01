@@ -10,6 +10,26 @@
     padding: 0;
 }
 
+html {
+    background:
+	linear-gradient(
+		var(--blue),
+		transparent
+	),
+	linear-gradient(
+		-90deg,
+		var(--yellow),
+		transparent
+	),
+	linear-gradient(
+		90deg,
+		var(--monored),
+		transparent
+    );
+    
+    background-blend-mode: screen;
+}
+
 /* ----------------------------------------------------- */
 /* FONTS */
 /* ----------------------------------------------------- */
@@ -49,7 +69,6 @@
 
 body {
     font-size: 100%;
-    background-color: var(--body-color);
     font-family: var(--body-font);
 }
 
@@ -67,8 +86,11 @@ nav span.display {
 h2 {
     font-family: var(--heading-font);
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 5px;
+}
+
+.container h2 {
+    padding: 40px;
+    font-size: 2rem;
 }
 
 /* each letter in the title "COLOR" */
@@ -114,27 +136,6 @@ hr {
     margin-top: 30px;
 }
 
-/* edit icons on pages */
-.thumbnail-icon-container {
-    position: relative;
-}
-
-/* overlapping green and black icons */
-.thumbnail-icon {
-    color: var(--button-green);
-    position: absolute;
-    text-shadow: 4px 4px var(--button-black);
-    z-index: 2;
-}
-
-h3.author {
-    text-align: left;
-    margin: 10px;
-    padding: 0;
-    padding-top: 10px;
-
-}
-
 /* help page */
 .icon {
     width: 130px;
@@ -160,6 +161,7 @@ h3.author {
     border-radius:100px;
 }
 
+/* images on help page */
 img#helppics {
     display: flex;
     align-items: center;
@@ -170,15 +172,65 @@ img#helppics {
     box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
 }
 
+/* images on case study */
+img#cspics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* container for styletile images */
+.casestudyimgs {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media only screen and (min-width: 320px) {
+    img#helppics {
+        width: 90%;
+    }
+    img#cspics {
+        width: 90%;
+    }
+    .casestudyimgs {
+        flex-direction: column;
+        width: 100%;
+    }
+    .container {
+        width: 95%;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     img#helppics {
         width: 50%;
+    }
+    img#cspics {
+        width: 50%;
+    }
+    .casestudyimgs {
+        flex-direction: column;
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 1024px) {
     img#helppics {
+        width: 50%;
+    }
+    img#cspics {
         width: 25%;
+    }
+    .casestudyimgs {
+        flex-direction: row;
+    }
+    .container {
+        width: 50%;
     }
 }
 
@@ -186,6 +238,7 @@ img#helppics {
 .container {
     padding-top: 20px;
     padding-bottom: 30px;
+    margin: 0 auto;
 }
 
 /* section spacing */
@@ -201,12 +254,6 @@ h3 {
     text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
-    h3 {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}
 
 h3.steps {
     text-align: center;
@@ -241,11 +288,23 @@ p {
     width: inherit;
 }
 
-/* tools section */
+h3.cpauthor {
+    background-color: none;
+    color: black;
+    text-align: left;
+    margin: 10px;
+    padding: 0;
+    padding-top: 10px;
+}
+
+/* drawer section under coloring page */
 .drawer {
     background-color: var(--white);
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(228, 228, 228));
     padding-top: 1rem;
     padding-bottom: 1rem;
+    box-shadow: 2px 2px 5px 2px hsla(235, 55%, 5%, .2),
+    3px 2px 3px 1px hsla(235, 55%, 5%, .4);
 }
 
 .row {
@@ -253,16 +312,30 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     list-style-type: none;
     width: 100%;
 }
 
+/* top row / tools */
 .row.tools {
     margin-bottom: 1rem;
+    justify-content: center;
 }
 
-/* icons in tools bar */
+.row.tools li {
+    padding: 0 5px 0 5px;
+}
+
+/* bottom row / swatches */
+.row.color-picker {
+    justify-content: center;
+}
+
+.row.color-picker li {
+    padding: 0 5px 0 5px;
+}
+
+/* icons in drawer bar */
 .row .fa {
     color: transparent;
     background-image: linear-gradient(180deg, var(--border-green) 0%, var(--border-blue) 37%, var(--border-red) 100%);
@@ -285,6 +358,7 @@ p {
 .row .swatch button {
     border-radius: 50%;
 }
+
 
 .row button:hover,
 .row button:focus {
@@ -385,18 +459,11 @@ main {
     }
 }
 
-/* back shadow on s */
+/* thumbnail container / rainbow border */
 .thumbnails {
     border: 4px solid transparent;
     width: 100%;
     height: auto;
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-    box-shadow: 0 8px 6px -6px black;
-}
-
-.thumbnails:hover,
-.thumbnails:focus {
     border-image: linear-gradient(to bottom right,
             var(--border-blue) 0%,
             var(--border-green) 25%,
@@ -406,11 +473,26 @@ main {
     border-image-slice: 1;
 }
 
+/* container for author names */
+.attribution {
+    background: white;
+    opacity: 75%;
+    padding: 5px;
+}
+
+/* author text */
+.attribution h3 {
+    text-align: left;
+    padding: 0;
+    color: black;
+}
+
 /* side navigation */
 
 .navigation {
     background-color: var(--white);
     border-bottom: solid var(--border-color) 2px;
+    box-shadow: 0 8px 6px -8px black;
 }
 
 nav {
@@ -495,7 +577,7 @@ ul.cardsort {
 }
 
 section {
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 30px;
 }
 
@@ -505,6 +587,7 @@ section {
 }
 
 .card {
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(218, 218, 218));
 	display: inline-block;
 	width: 100%;
     max-width: 20rem;
@@ -522,8 +605,7 @@ section {
 }
 
 .card-description {
-	display: block;
-	color: #515151;
+    color: #515151;
     text-decoration: none;
     padding: 1em;
 }
