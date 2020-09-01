@@ -1,65 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+        <link rel="shortcut icon" href="images/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="style/main.css" />
         <title>OtEC | Case Study</title>
+        <script src="https://use.fontawesome.com/20cbea2300.js"></script>
     </head>
+
     <body>
-        <nav class="border">
+        <nav class="navigation">
             <ul>
-                <li class="logo">
-                    <a href="index.html">logo goes here</a>
-                </li>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="index.html">Home</a>
+                    <a href="help.html">Help</a>
+                    <a href="./case-study.html">Case Study</a>
+                    <a href="https://github.com/b7s9/coloring-book" rel="noopener noreferrer" target="_blank">Github
+                        Repository&nbsp;<i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                </div>
+                <span style="font-size:30px;cursor:pointer;" onclick="openNav()"><i class="fa fa-bars"
+                       aria-hidden="true"></i></span>
                 <li>
-                    <a href="https://github.com/b7s9/coloring-book"
-                        >Github Repository</a
-                    >
-                </li>
-                <li>
-                    <a href="case-study.html">Case Study</a>
+                    <span class="display">Off the Edge
+                        <span class="c">c</span>
+                        <span class="o">o</span>
+                        <span class="l">l</span>
+                        <span class="oo">o</span>
+                        <span class="r">r</span>
+                        ing</span>
                 </li>
             </ul>
         </nav>
         <main>
+            <img src="images/icon.png" class="icon" id="boxs">
             <h1>Case Study: Off the Edge Coloring</h1>
             <section>
-                <h2>our team</h2>
-                <li>
-                    <span>photo?</span>
-                    <span>First Name Last Name</span>
-                    <span>fun fact?</span>
+                <h2>Meet the Blue Team</h2>
+                <ul class="cardsort">
+                <li class="card">
+                    <div class="card-image">
+                        <img src="images/casestudy/ben.jpg" />
+                    </div>
+                    <div class="card-description">
+                        <h2>Ben Schenerman</h2>
+                        <p>Role</p>
+                        <p>Fun Fact: I can catch flies with my bare hands.</p>
+                    </div>
                 </li>
-                <li>
-                    <span>photo?</span>
-                    <span>First Name Last Name</span>
-                    <span>fun fact?</span>
+                <li class="card">
+                    <div class="card-image">
+                        <img src="images/casestudy/devin.jpg" />
+                    </div>
+                    <div class="card-description">
+                        <h2>Devin Taylor</h2>
+                        <p>Role</p>
+                        <p>Fun Fact: I have two golden retrievers. </p>
+                    </div>
                 </li>
-                <li>
-                    <span>photo?</span>
-                    <span>First Name Last Name</span>
-                    <span>fun fact?</span>
+                <li class="card">
+                    <div class="card-image">
+                        <img src="images/casestudy/john.jpg" />
+                    </div>
+                    <div class="card-description">
+                        <h2>John Eberly</h2>
+                        <p>Role</p>
+                        <p>Fun Fact: I don't have a driver's license.</p>
+                    </div>
                 </li>
-                <li>
-                    <span>photo?</span>
-                    <span>First Name Last Name</span>
-                    <span>fun fact?</span>
+                <li class="card">
+                    <div class="card-image">
+                        <img src="images/casestudy/mikayla.jpg" />
+                    </div>
+                    <div class="card-description">
+                        <h2>Mikayla Lisiy</h2>
+                        <p>Role</p>
+                        <p>Fun Fact: I like watching alien conspiracy documentaries.</p>
+                    </div>
                 </li>
-                <li>
-                    <span>photo?</span>
-                    <span>First Name Last Name</span>
-                    <span>fun fact?</span>
+                <li class="card">
+                    <div class="card-image">
+                        <img src="images/casestudy/wynn.jpg" />
+                    </div>
+                    <div class="card-description">
+                        <h2>Wynn O'Donnell</h2>
+                        <p>Role</p>
+                        <p>Fun Fact: I drove across the country from Seattle to Philadelphia.</p>
+                    </div>
                 </li>
+                </ul>
             </section>
             <section>
-                <h2>problem statment</h2>
+                <h2>Problem Statment</h2>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Veniam ut molestias facere omnis asperiores a error sit
-                    ducimus dolor. Vitae, accusantium deserunt amet dolorem
-                    facere impedit beatae tenetur ea voluptates!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Atque ducimus accusamus neque, consequuntur eaque quisquam
+                    et. Modi laboriosam quasi rerum rem alias! Sunt ullam dolor
+                    libero asperiores distinctio alias delectus.
                 </p>
             </section>
             <section>
@@ -83,4 +129,5 @@
 
         <script src="js/main.js"></script>
     </body>
+
 </html>
