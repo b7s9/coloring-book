@@ -12,5 +12,5 @@ async function _clean(callback) {
 
 exports.static = static;
 exports.css = css;
-exports.build = series(_clean, parallel(minifyCss, js))
+exports.build = series(_clean, parallel(css, js, static))
 // exports.default = build;
