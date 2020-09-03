@@ -12,6 +12,9 @@ h_flag=''
 # images 
 i_flag=''
 
+# js 
+j_flag=''
+
 # svgs
 s_flag=''
 
@@ -29,12 +32,13 @@ print_usage() {
 }
 
 # this sets the values if the flags are passed in 
-while getopts 'afhistg:v' flag; do
+while getopts 'afhijstg:v' flag; do
   case "${flag}" in
     a) a_flag='true' ;;
     f) f_flag='true' ;;
     h) h_flag='true' ;;
     i) i_flag='true' ;;
+    j) j_flag='true' ;;
     s) s_flag='true' ;;
     t) t_flag='true' ;;
     g) files="${OPTARG}" ;;
@@ -62,6 +66,15 @@ then
 echo "copying html"
 rm dist/*.html
 find src/ -name \*.html -exec cp {} dist \;
+fi
+
+if [ $j_flag ] || [ $a_flag ]
+then
+echo "copying js"
+if [ -d dist/js ]; then
+	rm -R dist/js
+fi
+cp -R src/js/ dist/js/
 fi
 
 if [ $i_flag ] || [ $a_flag ]
