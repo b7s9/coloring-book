@@ -1,5 +1,6 @@
 const { series, parallel } = require('gulp');
 const del = require('del')
+const path = require('path')
 const { js } = require('./tasks/js')
 const { css, minifyCss } = require('./tasks/css')
 const watch = require('./tasks/watch')
@@ -11,6 +12,6 @@ async function _clean(callback) {
 }
 
 exports.css = css;
-// exports.js = js;
-// exports.build = series(_clean, parallel(css, js))
+exports.js = js;
+exports.build = series(_clean, parallel(css, js))
 exports.default = watch;
