@@ -130,13 +130,7 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(168, 168, 168, 0.75), rgba(0, 0, 0, 0));
 }
 
-/* hr element - border under welcome desc */
-#pgdivide {
-    border-top: 2px solid #e0e0e0;
-    margin-top: 30px;
-}
-
-/* help page */
+/* icon */
 .icon {
     width: 130px;
     height: 130px;
@@ -153,6 +147,7 @@ hr {
     }
 }
 
+/* drop shadow on icon */
 #boxs {
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
     -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
@@ -170,80 +165,6 @@ img#helppics {
     height: auto;
     margin: 0 auto;
     box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
-}
-
-/* images on case study */
-img#cspics {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-/* container for styletile images */
-.casestudyimgs {
-    display: inline-flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-@media only screen and (min-width: 320px) {
-    img#helppics {
-        width: 90%;
-    }
-    img#cspics {
-        width: 90%;
-    }
-    .casestudyimgs {
-        flex-direction: column;
-        width: 100%;
-    }
-    .container {
-        width: 95%;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    img#helppics {
-        width: 50%;
-    }
-    img#cspics {
-        width: 50%;
-    }
-    .casestudyimgs {
-        flex-direction: column;
-        width: 100%;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    img#helppics {
-        width: 50%;
-    }
-    img#cspics {
-        width: 25%;
-    }
-    .casestudyimgs {
-        flex-direction: row;
-    }
-    .container {
-        width: 50%;
-    }
-}
-
-/* container for faq section */
-.container {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    margin: 0 auto;
-}
-
-/* section spacing */
-.section {
-    margin: 15px;
 }
 
 h3 {
@@ -336,11 +257,17 @@ h3.cpauthor {
 }
 
 /* icons in drawer bar */
-.row .fa {
+.tools .fa {
     color: transparent;
     background-image: linear-gradient(180deg, var(--border-green) 0%, var(--border-blue) 37%, var(--border-red) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* needed to clip gradient to icons */
+    padding: 10px;
+}
+
+button#colorwheel {
+    background-image: linear-gradient(180deg, var(--border-green) 0%, var(--border-blue) 37%, var(--border-red) 100%);
+    -webkit-text-fill-color: #ececec; 
     padding: 10px;
 }
 
@@ -414,10 +341,6 @@ h3.cpauthor {
     padding-bottom: 40px;
 }
 
-main {
-    padding-top: 20px;
-}
-
 /* flex columns */
 .item {
     width: 80%;
@@ -475,8 +398,7 @@ main {
 
 /* container for author names */
 .attribution {
-    background: white;
-    opacity: 75%;
+    background-color: rgb(255, 255, 255, 0.8);
     padding: 5px;
 }
 
@@ -557,7 +479,98 @@ nav ul {
     }
 }
 
-/* case study */
+/* Case Study + Help */
+
+/* container for case study */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* case study paragraph */
+#studytxt {
+    line-height: 25px;
+    padding: 10px;
+}
+
+/* images on case study */
+img#cspics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* container for styletile images */
+.casestudyimgs {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media only screen and (min-width: 320px) {
+    img#helppics {
+        width: 90%;
+    }
+    img#cspics {
+        width: 90%;
+    }
+    .casestudyimgs {
+        flex-direction: column;
+        width: 100%;
+    }
+    .container {
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    img#helppics {
+        width: 50%;
+    }
+    img#cspics {
+        width: 50%;
+    }
+    .casestudyimgs {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    img#helppics {
+        width: 50%;
+    }
+    img#cspics {
+        width: 30%;
+    }
+    .casestudyimgs {
+        flex-direction: row;
+    }
+    .container {
+        width: 50%;
+    }
+}
+
+/* container for faq section */
+.container {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
+
+/* section spacing */
+.section {
+    margin: 15px;
+}
+
 main h1 {
     text-align: center;
     padding: 30px;
@@ -587,7 +600,8 @@ section {
 }
 
 .card {
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(218, 218, 218));
+    background-color: var(--white);
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(238, 238, 238));
 	display: inline-block;
 	width: 100%;
     max-width: 20rem;
@@ -613,4 +627,3 @@ section {
 .card-description p {
     padding: 0.15em;
 }
-
