@@ -2,7 +2,9 @@ const { dest, src } = require('gulp')
 const path = require('path')
 const del = require('del')
 const imagemin = require('gulp-imagemin')
+const shell = require('gulp-shell')
 
+const binDir = path.join(__dirname, '../../bin/)')
 const imagesDir = path.join(__dirname, '../../src/images/**/*)')
 const imagesDirDest = path.join(__dirname, '../../dist/images/)')
 
@@ -17,16 +19,21 @@ const destDir = path.join(__dirname, '../../dist/')
 // copy thumbnails
 
 function _copyImages() {
-	return src(imagesDir)
-		// .pipe(imagemin([
-		// 	imagemin.optipng({ optimizationLevel: 5 }),
-		// 	imagemin.mozjpeg({ quality: 75, progressive: true }),
-		// ]))
-		.pipe(dest(imagesDirDest))
+	return src('*.jpg', { read: false })
+		.pipe(shell('echo hello, hello'))
+		.pipe(shell([`sh ${binDir}static.sh -i`]))
+
+	// .pipe(dest(imagesDirDest))
 }
 
 function _static(callback) {
 	_copyImages()
+	// run('sh '+binDir+'static.sh')
+	// shell([`echo ${binDir}static.sh -i`])
+	// shell.task(('echo hello world'))
+	// run('babel index.js --out-file index.es5.js', {
+	// 	env: { NODE_ENV: 'production' }
+	// })
 	callback()
 }
 
