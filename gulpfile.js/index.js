@@ -11,5 +11,6 @@ async function _clean(callback) {
 }
 
 exports.css = css;
-exports.build = series(_clean, parallel(css))
+// exports.js = js;
+// exports.build = series(_clean, parallel(css, js))
 exports.default = watch;
