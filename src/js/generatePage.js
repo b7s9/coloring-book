@@ -4,7 +4,7 @@ const undoBtn = document.querySelector('.tools .undo button')
 const redoBtn = document.querySelector('.tools .redo button')
 
 const canvas = document.getElementById('canvas');
-const authorElement = document.querySelector('.coloring-page .author .attribution')
+const authorElement = document.querySelector('.coloring-page .cpauthor .attribution')
 
 // --------------------------------------------------------
 // SVG and path functions
@@ -103,14 +103,14 @@ const historyRepeatStep = () => {
 getSvg(canvas).then(svg => {
 	setTimeout(() => {
 		getPaths(svg.contentDocument)
-	}, 200);
+	}, 800);
 })
 
 window.addEventListener('hashchange', () => {
 	getSvg(canvas).then(svg => {
 		setTimeout(() => {
 			getPaths(svg.contentDocument)
-		}, 200);
+		}, 800);
 	})
 })
 
