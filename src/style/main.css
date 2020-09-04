@@ -2,12 +2,20 @@
 /* RESET */
 /* ----------------------------------------------------- */
 
-@import 'variables.css';
+/* importing now handled by gulp */
+/* @import 'variables.css'; */
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    background: linear-gradient(var(--blue), transparent), linear-gradient(-90deg, var(--yellow), transparent),
+        linear-gradient(90deg, var(--monored), transparent);
+
+    background-blend-mode: screen;
 }
 
 /* ----------------------------------------------------- */
@@ -49,13 +57,7 @@
 
 body {
     font-size: 100%;
-    background-color: var(--body-color);
     font-family: var(--body-font);
-}
-
-main {
-    margin: 0 auto;
-    max-width: 52rem;
 }
 
 nav span.display {
@@ -72,39 +74,37 @@ nav span.display {
 h2 {
     font-family: var(--heading-font);
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
-h3 {
-    font-family: var(--body-font);
-    font-size: 1rem;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
+.container h2 {
+    padding: 40px;
+    font-size: 2rem;
 }
 
 /* each letter in the title "COLOR" */
 .c {
     color: var(--teal);
+    letter-spacing: -2px;
 }
 
 .o {
     color: var(--blue);
+    letter-spacing: -2px;
 }
 
 .l {
     color: var(--green);
+    letter-spacing: -2px;
 }
 
 .oo {
     color: var(--yellow);
+    letter-spacing: -2px;
 }
 
 .r {
     color: var(--monored);
+    letter-spacing: -2px;
 }
 
 a {
@@ -118,14 +118,6 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(168, 168, 168, 0.75), rgba(0, 0, 0, 0));
 }
 
-p {
-    font-family: var(--body-font);
-    font-size: 1rem;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-}
-
 /* hr element - border under welcome desc */
 #pgdivide {
     border-top: 2px solid #e0e0e0;
@@ -133,35 +125,82 @@ p {
 }
 
 /* edit icons on pages */
-.editicon {
+.thumbnail-icon-container {
     position: relative;
 }
 
-/* overlapping red & blue icons */
-#green {
-    position: absolute;
+/* overlapping green and black icons */
+.thumbnail-icon {
     color: var(--button-green);
-    z-index: 2;
-}
-
-#black {
     position: absolute;
-    margin-top: 4px !important;
-    margin-left: 4px !important;
-    color: var(--button-black);
-    z-index: 1;
+    text-shadow: 4px 4px var(--button-black);
+    z-index: 2;
 }
 
 h3.author {
     text-align: left;
-    margin: 0;
+    margin: 10px;
     padding: 0;
     padding-top: 10px;
 }
 
-/* section spacing */
-.section {
-    margin: 15px;
+/* help page */
+.icon {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .icon {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+/* drop shadow on icon */
+#boxs {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
+}
+
+/* images on help page */
+img#helppics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+h3.steps {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+p {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
 }
 
 /* section for coloring page */
@@ -183,11 +222,22 @@ h3.author {
     width: inherit;
 }
 
-/* tools section */
+h3.cpauthor {
+    background-color: none;
+    color: black;
+    text-align: left;
+    margin: 10px;
+    padding: 0;
+    padding-top: 10px;
+}
+
+/* drawer section under coloring page */
 .drawer {
     background-color: var(--white);
-    margin-bottom: 2rem;
-    padding: 1rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(228, 228, 228));
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 2px 2px 5px 2px hsla(235, 55%, 5%, 0.2), 3px 2px 3px 1px hsla(235, 55%, 5%, 0.4);
 }
 
 .row {
@@ -195,32 +245,47 @@ h3.author {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     list-style-type: none;
     width: 100%;
 }
 
+/* top row / tools */
 .row.tools {
     margin-bottom: 1rem;
+    justify-content: center;
 }
 
-/* icons in tools bar */
-.row .fa {
+.row.tools li {
+    padding: 0 5px 0 5px;
+}
+
+/* bottom row / swatches */
+.row.color-picker {
+    justify-content: center;
+}
+
+.row.color-picker li {
+    padding: 0 5px 0 5px;
+}
+
+/* icons in drawer bar */
+.tools .fa {
     color: transparent;
     background-image: linear-gradient(180deg, var(--border-green) 0%, var(--border-blue) 37%, var(--border-red) 100%);
-    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* needed to clip gradient to icons */
     padding: 10px;
 }
 
 /* colors in tools section */
 .row button {
-    border-radius: 20%;
+    border-radius: 50%;
     border: 1.5px solid black;
     cursor: pointer;
     font-size: 1.25rem;
-    height: 3rem;
+    height: 2.9rem;
     opacity: 1;
-    width: 3rem;
+    width: 2.9rem;
 }
 
 .row .swatch button {
@@ -229,7 +294,8 @@ h3.author {
 
 .row button:hover,
 .row button:focus {
-    border: 2px solid #444444;
+    border: 3px solid #444444;
+    outline: none;
 }
 
 .row button:active {
@@ -258,12 +324,6 @@ h3.author {
     background-color: var(--border-blue);
 }
 
-/* container for welcome section */
-.container {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 #welcomeicon {
     display: flex;
     margin-left: auto;
@@ -278,16 +338,12 @@ h3.author {
 }
 
 /* center coloring pages into column */
-.coloringpages {
+#gallery {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding-top: 40px;
     padding-bottom: 40px;
-}
-
-main {
-    padding-top: 20px;
 }
 
 /* flex columns */
@@ -300,14 +356,14 @@ main {
 }
 
 /* split rows in columns for tablet + desktop */
-@media only screen and (min-width: 768px) {
-    .coloringpages {
+@media only screen and (min-width: 320px) {
+    #gallery {
         flex-direction: row;
     }
 
     .item {
-        width: 35%;
-        height: 35%;
+        width: 45%;
+        height: 45%;
         margin: 20px;
         margin-left: auto;
         margin-right: auto;
@@ -315,7 +371,7 @@ main {
 }
 
 @media only screen and (min-width: 1024px) {
-    .coloringpages {
+    #gallery {
         flex-direction: row;
     }
 
@@ -331,7 +387,7 @@ main {
     }
 }
 
-/* back shadow on s */
+/* thumbnail container / rainbow border */
 .thumbnails {
     border: 4px solid transparent;
     width: 100%;
@@ -343,13 +399,28 @@ main {
 
 .thumbnails:hover,
 .thumbnails:focus {
-    border-image: linear-gradient(to bottom right,
-            var(--border-blue) 0%,
-            var(--border-green) 25%,
-            var(--border-yellow) 50%,
-            var(--border-orange) 75%,
-            var(--border-red) 100%);
+    border-image: linear-gradient(
+        to bottom right,
+        var(--border-blue) 0%,
+        var(--border-green) 25%,
+        var(--border-yellow) 50%,
+        var(--border-orange) 75%,
+        var(--border-red) 100%
+    );
     border-image-slice: 1;
+}
+
+/* container for author names */
+.attribution {
+    background-color: rgb(255, 255, 255, 0.8);
+    padding: 5px;
+}
+
+/* author text */
+.attribution h3 {
+    text-align: left;
+    padding: 0;
+    color: black;
 }
 
 /* side navigation */
@@ -357,6 +428,7 @@ main {
 .navigation {
     background-color: var(--white);
     border-bottom: solid var(--border-color) 2px;
+    box-shadow: 0 8px 6px -8px black;
 }
 
 nav {
@@ -368,26 +440,16 @@ nav {
 
 nav ul {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-/* logo style in nav */
-.logo img {
-    width: 35px;
-    height: 35px;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    -o-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    border-radius: 100px;
-}
-
 .sidenav {
+    box-shadow: 6px 2px 11px gray;
     height: 100%;
     width: 0;
     position: fixed;
@@ -432,15 +494,150 @@ nav ul {
     }
 }
 
-/* footer */
-.footer {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 5rem;
-    bottom: 0;
+/* Case Study + Help */
+
+/* container for case study */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
 }
 
-.footer p {
-    padding: 2rem;
+/* case study paragraph */
+#studytxt {
+    line-height: 25px;
+    padding: 10px;
+}
+
+/* images on case study */
+img#cspics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* container for styletile images */
+.casestudyimgs {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media only screen and (min-width: 320px) {
+    img#helppics {
+        width: 90%;
+    }
+    img#cspics {
+        width: 90%;
+    }
+    .casestudyimgs {
+        flex-direction: column;
+        width: 100%;
+    }
+    .container {
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    img#helppics {
+        width: 50%;
+    }
+    img#cspics {
+        width: 50%;
+    }
+    .casestudyimgs {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    img#helppics {
+        width: 50%;
+    }
+    img#cspics {
+        width: 30%;
+    }
+    .casestudyimgs {
+        flex-direction: row;
+    }
+    .container {
+        width: 50%;
+    }
+}
+
+/* container for faq section */
+.container {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
+
+/* section spacing */
+.section {
+    margin: 15px;
+}
+
+main h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+ul.cardsort {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 768px) {
+    ul.cardsort {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.card-image > img {
+    display: block;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--white);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(238, 238, 238));
+    display: inline-block;
+    width: 100%;
+    max-width: 20rem;
+    margin: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.card:hover {
+    transform: translateY(-0.5rem) scale(1.0125);
+    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+.card-description {
+    display: block;
+    color: #515151;
+    text-decoration: none;
+    padding: 1em;
+}
+
+.card-description p {
+    padding: 0.15em;
 }
