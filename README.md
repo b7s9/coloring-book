@@ -10,7 +10,7 @@ In this project you can
 
 ## Installation Instructions
 
-Install dependencies
+Install dependencies. **Before running any of the following scripts, you must be in the root directory of this project**.
 
 ```bash
 cd $this_project_directory
@@ -20,11 +20,39 @@ npm install
 Build and Serve project on localhost
 
 ```bash
-cd $this_project_directory
 npm start
 ```
 
+To skip the build and just serve on localhost
+```bash
+npm run serve
+```
+
 The project will then be available on http://localhost:8080. (it should automatically open in your default browser)
+
+To develop locally, 
+```bash
+npm start
+gulp watch
+```
+
+changes to development files will be copied to the distribution folder on save, but assets will need to be re-applied if updated. To copy assets to the `dist/` directory, run
+```bash
+# all assets
+sh bin/static.sh -a
+# or
+npm run assets
+
+# fonts
+sh bin/static.sh -f
+
+# images
+sh bin/static.sh -i
+
+# svg
+sh bin/static.sh -s
+
+```
 
 ## Project Requirements
 
