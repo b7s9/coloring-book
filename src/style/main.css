@@ -11,22 +11,9 @@
 }
 
 html {
-    background:
-	linear-gradient(
-		var(--blue),
-		transparent
-	),
-	linear-gradient(
-		-90deg,
-		var(--yellow),
-		transparent
-	),
-	linear-gradient(
-		90deg,
-		var(--monored),
-		transparent
-    );
-    
+    background: linear-gradient(var(--blue), transparent), linear-gradient(-90deg, var(--yellow), transparent),
+        linear-gradient(90deg, var(--monored), transparent);
+
     background-blend-mode: screen;
 }
 
@@ -149,11 +136,11 @@ hr {
 
 /* drop shadow on icon */
 #boxs {
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
-    -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
-    -o-box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
-    border-radius:100px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    -o-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 100px;
 }
 
 /* images on help page */
@@ -164,7 +151,7 @@ img#helppics {
     width: 90%;
     height: auto;
     margin: 0 auto;
-    box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 h3 {
@@ -174,7 +161,6 @@ h3 {
     padding-right: 20px;
     text-align: center;
 }
-
 
 h3.steps {
     text-align: center;
@@ -221,11 +207,10 @@ h3.cpauthor {
 /* drawer section under coloring page */
 .drawer {
     background-color: var(--white);
-	background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(228, 228, 228));
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(228, 228, 228));
     padding-top: 1rem;
     padding-bottom: 1rem;
-    box-shadow: 2px 2px 5px 2px hsla(235, 55%, 5%, .2),
-    3px 2px 3px 1px hsla(235, 55%, 5%, .4);
+    box-shadow: 2px 2px 5px 2px hsla(235, 55%, 5%, 0.2), 3px 2px 3px 1px hsla(235, 55%, 5%, 0.4);
 }
 
 .row {
@@ -279,7 +264,6 @@ h3.cpauthor {
 .row .swatch button {
     border-radius: 50%;
 }
-
 
 .row button:hover,
 .row button:focus {
@@ -381,12 +365,14 @@ h3.cpauthor {
     border: 4px solid transparent;
     width: 100%;
     height: auto;
-    border-image: linear-gradient(to bottom right,
-            var(--border-blue) 0%,
-            var(--border-green) 25%,
-            var(--border-yellow) 50%,
-            var(--border-orange) 75%,
-            var(--border-red) 100%);
+    border-image: linear-gradient(
+        to bottom right,
+        var(--border-blue) 0%,
+        var(--border-green) 25%,
+        var(--border-yellow) 50%,
+        var(--border-orange) 75%,
+        var(--border-red) 100%
+    );
     border-image-slice: 1;
 }
 
@@ -429,6 +415,7 @@ nav ul {
 }
 
 .sidenav {
+    box-shadow: 6px 2px 11px gray;
     height: 100%;
     width: 0;
     position: fixed;
@@ -575,10 +562,10 @@ ul.cardsort {
 
 @media only screen and (max-width: 768px) {
     ul.cardsort {
-        flex-direction: column; 
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-     }
+    }
 }
 
 section {
@@ -587,27 +574,27 @@ section {
 }
 
 .card-image > img {
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .card {
     background-color: var(--white);
-	background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(238, 238, 238));
-	display: inline-block;
-	width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(238, 238, 238));
+    display: inline-block;
+    width: 100%;
     max-width: 20rem;
-	margin: 1rem;
-	font-size: 1rem;
-	text-decoration: none;
-	overflow: hidden;
-	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
-	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+    margin: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
 }
 
 .card:hover {
-	transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+    transform: translateY(-0.5rem) scale(1.0125);
+    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 .card-description {
