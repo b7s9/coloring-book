@@ -4,8 +4,11 @@
   "description": "Experimental project for IDM t-380",
   "main": "index.html",
   "scripts": {
-    "serve": "http-server src/ -s -o -c-1",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "assets": "sh bin/static.sh -a",
+    "build": "sh bin/static.sh -a && gulp build",
+    "prod": "npm run build && sh bin/deploy-build.sh",
+    "serve": "http-server dist/ -s -o -c-1",
+    "start": "npm run build && npm run serve"
   },
   "repository": {
     "type": "git",
@@ -18,8 +21,21 @@
   },
   "homepage": "https://github.com/b7s9/coloring-book#readme",
   "dependencies": {
-    "a-color-picker": "^1.2.1",
-    "http-server": "^0.12.3"
+    "a-color-picker": "^1.2.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-prettier": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "http-server": "^0.12.3"
+  }
 }
