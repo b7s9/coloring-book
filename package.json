@@ -6,9 +6,9 @@
   "scripts": {
     "assets": "sh bin/static.sh -a",
     "build": "sh bin/static.sh -a && gulp build",
+    "prod": "npm run build && sh bin/deploy-build.sh",
     "serve": "http-server dist/ -s -o -c-1",
-    "start": "npm run build && npm run serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && npm run serve"
   },
   "repository": {
     "type": "git",
