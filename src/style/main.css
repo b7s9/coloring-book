@@ -51,6 +51,34 @@ html {
 /* UTITLITIES */
 /* ----------------------------------------------------- */
 
+.scroll-none {
+    overflow: hidden;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    transition: background-color 119ms ease-in-out;
+    width: 100%;
+    z-index: 200;
+}
+
+.overlay[aria-hidden='true'] {
+    display: none;
+}
+
+.overlay .content {
+    left: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* ----------------------------------------------------- */
 /* RULES */
 /* ----------------------------------------------------- */
@@ -212,7 +240,7 @@ p {
 }
 
 .coloring-page #canvas {
-    height: calc(100vh - 265px);
+    height: calc(100vh - 270px);
     width: inherit;
 }
 
@@ -266,6 +294,33 @@ h3.cpauthor {
 
 .row.color-picker li {
     padding: 0 5px 0 5px;
+}
+
+.overlay .controls {
+    margin: 0 auto;
+    text-align: center;
+}
+
+button#ultra-color-picker-close {
+    background-color: var(--white);
+    border-radius: 3rem;
+    border: 1.5px solid black;
+    cursor: pointer;
+    font-size: 1.25rem;
+    margin: 1rem auto;
+    opacity: 1;
+    padding: 1rem 2rem;
+}
+
+button#ultra-color-picker-close:hover,
+button#ultra-color-picker-close:focus {
+    background-color: var(--border-yellow);
+    outline: none;
+}
+
+button#ultra-color-picker-close:active {
+    background-color: var(--border-orange);
+    opacity: 0.8;
 }
 
 /* icons in drawer bar */
