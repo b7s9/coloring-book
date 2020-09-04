@@ -70,6 +70,7 @@ sh bin/static.sh -s
 
 ### Nice to Haves
 
+-   [x] Full spectrum color picker
 -   [x] Undo/Redo steps feature
 -   [x] Automated deployment script
 -   [ ] Export svg/png/jpg
