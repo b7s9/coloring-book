@@ -17,6 +17,21 @@
     </head>
 
     <body>
+        <div class="overlay" aria-hidden="true">
+            <div class="content">
+                <div
+                    id="a-color-picker-container"
+                    acp-color="#00f2b9"
+                    acp-palette="PALETTE_MATERIAL_CHROME"
+                    acp-show-rgb="no"
+                    acp-show-hsl="no"
+                    acp-show-hex="no"
+                ></div>
+                <div class="controls">
+                    <button id="ultra-color-picker-close">Pick</button>
+                </div>
+            </div>
+        </div>
         <nav class="navigation">
             <ul>
                 <div id="mySidenav" class="sidenav">
@@ -90,6 +105,7 @@
         </main>
 
         <script src="js/main.js"></script>
+        <script src="js/acolorpicker.js"></script>
         <script src="js/color-picker.js"></script>
         <script src="js/generatePage.js" type="module"></script>
     </body>
