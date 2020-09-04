@@ -277,12 +277,6 @@ h3.cpauthor {
     padding: 10px;
 }
 
-button#colorwheel {
-    background-image: linear-gradient(180deg, var(--border-green) 0%, var(--border-blue) 37%, var(--border-red) 100%);
-    -webkit-text-fill-color: #ececec;
-    padding: 10px;
-}
-
 /* colors in tools section */
 .row button {
     border-radius: 50%;
@@ -455,6 +449,7 @@ nav ul {
 }
 
 .sidenav {
+    box-shadow: 6px 2px 11px gray;
     height: 100%;
     width: 0;
     position: fixed;
@@ -618,6 +613,8 @@ section {
 }
 
 .card {
+    background-color: var(--white);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(238, 238, 238));
     display: inline-block;
     width: 100%;
     max-width: 20rem;
