@@ -1,5 +1,3 @@
-// import AColorPicker from './a-color-picker';
-
 // swatch = the HTML element
 // color = internal value
 
@@ -14,8 +12,6 @@ const colorPickerCloseBtn = document.getElementById('ultra-color-picker-close');
 AColorPicker.from('div#a-color-picker-container')
 	.on('change', (picker, color) => {
 		const hex = AColorPicker.parseColor(color, "hex");
-		console.log(picker)
-		console.log(hex)
 		colorPickerOpenBtn.style.backgroundColor = hex;
 		selectedColor = hex;
 	});
